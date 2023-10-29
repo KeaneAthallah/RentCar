@@ -1,7 +1,7 @@
     <!-- header section start -->
     <div class="header_section header_bg">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a href="index.html" class="logo"><img src="{{ asset('frontend/images/logo.png') }}"></a>
+            <a href="{{ route('home') }}" class="logo"><img src="{{ asset('frontend/images/logo.png') }}"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -23,15 +23,15 @@
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html">Contact Us</a>
                     </li>
+                    @if (Route::has('login'))
+                        @auth
+                            <li class="nav-item"><a class="nav-link" href="{{ route('admin.dashboard') }}">Dashboard</a>
+                            </li>
+                        @else
+                            <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">Login</a></li>
+                        @endauth
+                    @endif
                 </ul>
-                <form class="form-inline my-lg-0 my-2">
-                    <div class="login_menu">
-                        <ul>
-                            <li><a href="#">Login</a></li>
-                        </ul>
-                    </div>
-                    <div></div>
-                </form>
             </div>
             <div id="main">
                 <span style="font-size:36px;cursor:pointer; color: #fff" onclick="openNav()"><img
