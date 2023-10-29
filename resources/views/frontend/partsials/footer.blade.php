@@ -1,71 +1,42 @@
-    <!-- Footer Start -->
-    <div class="container-fluid bg-secondary text-light footer wow fadeIn mt-5 pt-5" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-lg-4 col-md-6">
-                    <h4 class="text-uppercase mb-4">Get In Touch</h4>
-                    <div class="d-flex align-items-center mb-2">
-                        <div class="btn-square bg-dark me-3 flex-shrink-0">
-                            <span class="fa fa-map-marker-alt text-primary"></span>
+    <!-- footer section start -->
+    <div class="footer_section layout_padding">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-8 col-sm-12 padding_0">
+                    <div class="map_main">
+                        <div class="map-responsive">
+                            <iframe
+                                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&amp;q=Eiffel+Tower+Paris+France"
+                                width="600" height="400" frameborder="0" style="border:0; width: 100%;"
+                                allowfullscreen=""></iframe>
                         </div>
-                        <span>123 Street, New York, USA</span>
-                    </div>
-                    <div class="d-flex align-items-center mb-2">
-                        <div class="btn-square bg-dark me-3 flex-shrink-0">
-                            <span class="fa fa-phone-alt text-primary"></span>
-                        </div>
-                        <span>+012 345 67890</span>
-                    </div>
-                    <div class="d-flex align-items-center">
-                        <div class="btn-square bg-dark me-3 flex-shrink-0">
-                            <span class="fa fa-envelope-open text-primary"></span>
-                        </div>
-                        <span>info@example.com</span>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <h4 class="text-uppercase mb-4">Quick Links</h4>
-                    <a class="btn btn-link" href="">About Us</a>
-                    <a class="btn btn-link" href="">Contact Us</a>
-                    <a class="btn btn-link" href="">Our Services</a>
-                    <a class="btn btn-link" href="">Terms & Condition</a>
-                    <a class="btn btn-link" href="">Support</a>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <h4 class="text-uppercase mb-4">Newsletter</h4>
-                    <div class="position-relative mb-4">
-                        <input class="form-control w-100 border-0 py-3 pe-5 ps-4" type="text"
-                            placeholder="Your email">
-                        <button type="button"
-                            class="btn btn-primary position-absolute end-0 top-0 me-2 mt-2 py-2">SignUp</button>
+                <div class="col-lg-4 col-sm-12">
+                    <div class="call_text"><a href="#"><img
+                                src="{{ asset('frontend/images/map-icon.png') }}"><span class="padding_left_0">Page
+                                when looking at its layou</span></a></div>
+                    <div class="call_text"><a href="#"><img
+                                src="{{ asset('frontend/images/call-icon.png') }}"><span class="padding_left_0">Call
+                                Now +01 123467890</span></a></div>
+                    <div class="call_text"><a href="#"><img
+                                src="{{ asset('frontend/images/mail-icon.png') }}"><span
+                                class="padding_left_0">demo@gmail.com</span></a></div>
+                    <div class="social_icon">
+                        <ul>
+                            <li><a href="#"><img src="{{ asset('frontend/images/fb-icon1.png') }}"></a></li>
+                            <li><a href="#"><img src="{{ asset('frontend/images/twitter-icon.png') }}"></a>
+                            </li>
+                            <li><a href="#"><img src="{{ asset('frontend/images/linkedin-icon.png') }}"></a>
+                            </li>
+                            <li><a href="#"><img src="{{ asset('frontend/images/instagram-icon.png') }}"></a>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="d-flex m-n1 pt-1">
-                        <a class="btn btn-lg-square btn-dark text-primary m-1" href=""><i
-                                class="fab fa-twitter"></i></a>
-                        <a class="btn btn-lg-square btn-dark text-primary m-1" href=""><i
-                                class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-lg-square btn-dark text-primary m-1" href=""><i
-                                class="fab fa-youtube"></i></a>
-                        <a class="btn btn-lg-square btn-dark text-primary m-1" href=""><i
-                                class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="copyright">
-                <div class="row">
-                    <div class="col-md-6 text-md-start mb-md-0 mb-3 text-center">
-                        &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
-                    </div>
-                    <div class="col-md-6 text-md-end text-center">
-                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                        Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
-                        <br>Distributed By: <a class="border-bottom" href="https://themewagon.com"
-                            target="_blank">ThemeWagon</a>
-                    </div>
+                    <input type="text" class="email_text" placeholder="Enter Your Email" name="Enter Your Email">
+                    <div class="subscribe_bt"><a href="#">Subscribe</a></div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Footer End -->
+    <!-- footer section end -->

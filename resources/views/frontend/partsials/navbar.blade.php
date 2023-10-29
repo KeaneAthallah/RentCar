@@ -1,31 +1,107 @@
-    <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-secondary navbar-dark sticky-top py-lg-0 px-lg-5 wow fadeIn"
-        data-wow-delay="0.1s">
-        <a href="index.html" class="navbar-brand ms-lg-0 ms-4">
-            <h1 class="text-primary text-uppercase mb-0"><i class="fa fa-cut me-3"></i>HairCut</h1>
-        </a>
-        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="navbar-collapse collapse" id="navbarCollapse">
-            <div class="navbar-nav p-lg-0 ms-auto p-4">
-                <a href="index.html" class="nav-item nav-link active">Home</a>
-                <a href="about.html" class="nav-item nav-link">About</a>
-                <a href="service.html" class="nav-item nav-link">Service</a>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                    <div class="dropdown-menu m-0">
-                        <a href="price.html" class="dropdown-item">Pricing Plan</a>
-                        <a href="team.html" class="dropdown-item">Our Barber</a>
-                        <a href="open.html" class="dropdown-item">Working Hours</a>
-                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                        <a href="404.html" class="dropdown-item">404 Page</a>
+    <!-- header section start -->
+    <div class="header_section header_bg">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a href="index.html" class="logo"><img src="{{ asset('frontend/images/logo.png') }}"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">PriceList</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cycle.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shop.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-lg-0 my-2">
+                    <div class="login_menu">
+                        <ul>
+                            <li><a href="#">Login</a></li>
+                        </ul>
+                    </div>
+                    <div></div>
+                </form>
+            </div>
+            <div id="main">
+                <span style="font-size:36px;cursor:pointer; color: #fff" onclick="openNav()"><img
+                        src="{{ asset('frontend/images/toggle-icon.png') }}" style="height: 30px;"></span>
+            </div>
+        </nav>
+        <!-- banner section start -->
+        <div class="banner_section layout_padding">
+            <div id="main_slider" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-7">
+                                    <div class="best_text">Best</div>
+                                    <div class="image_1"><img src="{{ asset('frontend/images/pngwing.com.png') }}">
+                                    </div>
+                                </div>
+                                <div class="col-md-5">
+                                    <h1 class="banner_taital">New Model Car</h1>
+                                    <p class="banner_text">It is a long established fact that a reader will be
+                                        distracted by the readable content </p>
+                                    <div class="contact_bt"><a href="contact.html">Rent Now</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-7">
+                                    <div class="best_text">Best</div>
+                                    <div class="image_1"><img src="{{ asset('frontend/images/pngwing.com.png') }}">
+                                    </div>
+                                </div>
+                                <div class="col-md-5">
+                                    <h1 class="banner_taital">New Model Car</h1>
+                                    <p class="banner_text">It is a long established fact that a reader will be
+                                        distracted by the readable content </p>
+                                    <div class="contact_bt"><a href="contact.html">Rent Now</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-7">
+                                    <div class="best_text">Best</div>
+                                    <div class="image_1"><img src="{{ asset('frontend/images/pngwing.com.png') }}">
+                                    </div>
+                                </div>
+                                <div class="col-md-5">
+                                    <h1 class="banner_taital">New Model Car</h1>
+                                    <p class="banner_text">It is a long established fact that a reader will be
+                                        distracted by the readable content </p>
+                                    <div class="contact_bt"><a href="contact.html">Rent Now</a></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <a href="contact.html" class="nav-item nav-link">Contact</a>
+                <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                <a class="carousel-control-next" href="#main_slider" role="button" data-slide="next">
+                    <i class="fa fa-angle-right"></i>
+                </a>
             </div>
-            <a href="" class="btn btn-primary rounded-0 px-lg-4 d-none d-lg-block py-2">Appointment<i
-                    class="fa fa-arrow-right ms-3"></i></a>
         </div>
-    </nav>
-    <!-- Navbar End -->
+        <!-- banner section end -->
+    </div>
+    <!-- header section end -->
