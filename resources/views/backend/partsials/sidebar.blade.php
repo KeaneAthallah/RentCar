@@ -11,11 +11,12 @@
                     </div>
                 </div>
                 <div class="navbar-nav w-100">
-                    <a href="index.html" class="nav-item nav-link"><i class="fa fa-list-alt me-2"></i>List Rent
-                        Cars</a>
-                    <a href="widget.html" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Carousel</a>
-                    <a href="form.html" class="nav-item nav-link"><i class="fa fa-bars me-2"></i>About</a>
-                    <a href="table.html" class="nav-item nav-link"><i class="fa fa-file-archive me-2"></i>Contact</a>
+                    <a href="{{ route('cars.index') }}" class="nav-item nav-link"><i
+                            class="fa fa-list-alt me-2"></i>Cars</a>
+                    <a href="{{ route('carousels.index') }}" class="nav-item nav-link"><i
+                            class="fa fa-th me-2"></i>Carousels</a>
+                    <a href="#" class="nav-item nav-link"><i class="fa fa-bars me-2"></i>About</a>
+                    <a href="#" class="nav-item nav-link"><i class="fa fa-file-archive me-2"></i>Contact</a>
                 </div>
             </nav>
         </div>

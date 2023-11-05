@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CarController;
+use App\Http\Controllers\CarouselController;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -29,7 +30,8 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::get('/admindashboard', [FrontendController::class, 'admin'])->name('admin.dashboard');
-    Route::resource('Cars', CarController::class);
+    Route::resource('/admindashboard/cars', CarController::class);
+    Route::resource('/admindashboard/carousels', CarouselController::class);
 });
 
 require __DIR__ . '/auth.php';

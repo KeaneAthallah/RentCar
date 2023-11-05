@@ -11,6 +11,9 @@
     <!-- Favicon -->
     <link href="{{ asset('backend/img/favicon.ico') }}" rel="icon">
 
+    {{-- jQuery --}}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,11 +27,19 @@
     <link href="{{ asset('backend/lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
     <link href="{{ asset('backend/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css') }}" rel="stylesheet" />
 
+    <!-- Plugin css for Alltype Page -->
+    <link rel="stylesheet" href="{{ asset('backend/lib/datatables.net-bs5/dataTables.bootstrap5.css') }}">
+    <!-- End plugin css Alltype Page -->
+
     <!-- Customized Bootstrap Stylesheet -->
     <link href="{{ asset('backend/css/bootstrap.min.css') }}" rel="stylesheet">
 
     <!-- Template Stylesheet -->
     <link href="{{ asset('backend/css/style.css') }}" rel="stylesheet">
+
+    {{-- Toaster --}}
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css">
+    {{-- end Toaster --}}
 </head>
 
 <body>
@@ -74,8 +85,55 @@
     <script src="{{ asset('backend/lib/tempusdominus/js/moment-timezone.min.js') }}"></script>
     <script src="{{ asset('backend/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js') }}"></script>
 
+    <!-- Plugin js for Alltype Page -->
+    <script src="{{ asset('backend/lib/datatables.net/jquery.dataTables.js') }}"></script>
+    <script src="{{ asset('backend/lib/datatables.net-bs5/dataTables.bootstrap5.js') }}"></script>
+    <!-- End plugin js Alltype Page -->
+
+    <!-- Custom js Alltype Page -->
+    <script src="{{ asset('backend/js/data-table.js') }}"></script>
+    <!-- End custom js Alltype Page -->
+
     <!-- Template Javascript -->
     <script src="{{ asset('backend/js/main.js') }}"></script>
+    {{-- For Show Image --}}
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#image').change(function(e) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    $('#showImage').attr('src', e.target.result);
+                }
+                reader.readAsDataURL(e.target.files['0']);
+            });
+        });
+    </script>
+    {{-- End For --}}
+    {{-- For Show Toaster --}}
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script>
+        @if (Session::has('message'))
+            var type = "{{ Session::get('alert-type', 'info') }}"
+            switch (type) {
+                case 'info':
+                    toastr.info(" {{ Session::get('message') }} ");
+                    break;
+
+                case 'success':
+                    toastr.success(" {{ Session::get('message') }} ");
+                    break;
+
+                case 'warning':
+                    toastr.warning(" {{ Session::get('message') }} ");
+                    break;
+
+                case 'error':
+                    toastr.error(" {{ Session::get('message') }} ");
+                    break;
+            }
+        @endif
+    </script>
+    {{-- End Toaster --}}
 </body>
 
 </html>
